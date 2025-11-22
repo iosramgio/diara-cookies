@@ -1,0 +1,136 @@
+.admin-dashboard {
+  padding: 2rem 0;
+}
+
+.admin-dashboard h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+  border-left: 4px solid #d2691e;
+}
+
+.stat-card h3 {
+  margin: 0 0 1rem 0;
+  color: #666;
+  font-size: 1rem;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #d2691e;
+  margin: 0 0 1rem 0;
+}
+
+.stat-card a {
+  color: #d2691e;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.stat-card a:hover {
+  text-decoration: underline;
+}
+
+.recent-sections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.recent-products h2,
+.recent-blog-posts h2 {
+  margin-top: 0;
+  color: #333;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.items-list {
+  margin-top: 1rem;
+}
+
+.item-card {
+  background: white;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.item-card h4 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+}
+
+.item-card p {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.quick-actions h2 {
+  margin-top: 0;
+  color: #333;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.actions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.action-btn {
+  display: block;
+  background-color: #d2691e;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.action-btn:hover {
+  background-color: #b05a18;
+}
+
+@media (max-width: 768px) {
+  .recent-sections {
+    grid-template-columns: 1fr;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .actions-grid {
+    grid-template-columns: 1fr;
+  }
+}

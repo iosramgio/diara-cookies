@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles that extend Tailwind */
+@layer base {
+  h1 {
+    @apply text-3xl md:text-4xl font-bold text-gray-800 font-heading;
+  }
+  
+  h2 {
+    @apply text-2xl md:text-3xl font-semibold text-gray-800 font-heading;
+  }
+  
+  h3 {
+    @apply text-xl md:text-2xl font-medium text-gray-800 font-heading;
+  }
+  
+  h4 {
+    @apply text-lg md:text-xl font-medium text-gray-800 font-heading;
+  }
+  
+  p {
+    @apply text-gray-600 leading-relaxed;
+  }
+  
+  body {
+    @apply font-sans text-gray-700 bg-gray-50;
+  }
+  
+  .container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 cursor-pointer whitespace-nowrap;
+  }
+  
+  .btn-primary {
+    @apply btn bg-gradient-to-r from-primary-500 to-primary-700 hover:from-primary-600 hover:to-primary-800 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-gradient-to-r from-secondary-500 to-secondary-600 hover:from-secondary-600 hover:to-secondary-700 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+  }
+  
+  .btn-outline {
+    @apply btn bg-transparent border-2 border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white;
+  }
+  
+  .btn-whatsapp {
+    @apply btn bg-gradient-to-r from-secondary-500 to-secondary-600 hover:from-secondary-600 hover:to-secondary-700 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-card overflow-hidden transition-all duration-300 hover:shadow-lg;
+  }
+  
+  .product-card {
+    @apply card p-6 flex flex-col h-full transition-transform duration-300 hover:scale-105;
+  }
+}
+
+/* Additional custom styles */
+.ripple::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255,255,255,0.5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1,1) translate(-50%);
+  transform-origin: 50% 50%;
+}
+
+.ripple:focus:not(:active)::after {
+  animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0,0);
+    opacity: 0.5;
+  }
+  20% {
+    transform: scale(25,25);
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(40,40);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .container {
+    @apply px-4;
+  }
+}
+
+/* Typography enhancements */
+.text-hero {
+  @apply font-heading text-4xl md:text-5xl lg:text-6xl font-bold leading-tight;
+}
+
+.text-subhero {
+  @apply text-xl md:text-2xl text-gray-600 mb-8;
+}
+
+/* Gradient text utilities */
+.text-gradient {
+  @apply bg-clip-text text-transparent;
+}
+
+.text-gradient-primary {
+  @apply text-gradient bg-gradient-to-r from-primary-500 to-primary-700;
+}
+
+.text-gradient-secondary {
+  @apply text-gradient bg-gradient-to-r from-secondary-500 to-secondary-600;
+}
+
+/* Shadow utilities */
+.shadow-card {
+  @apply shadow-lg;
+}
+
+.shadow-hover {
+  @apply hover:shadow-xl transition-shadow duration-300;
+}

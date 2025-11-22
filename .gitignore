@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+backend/node_modules/
+frontend/node_modules/
+
+# Environment variables
+.env
+backend/.env
+frontend/.env
+
+# OS generated files
+.DS_Store
+Thumbs.db
+*.log
+
+# Build outputs
+dist/
+build/
+out/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Database
+*.db
+*.db-journal
+
+# Docker
+.dockerenv
+.Dockerfile
+docker-compose.yml
+
+# Backup files
+*.bak
+*.backup
+BACKUP.md
